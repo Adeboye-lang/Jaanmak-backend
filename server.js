@@ -66,7 +66,7 @@ app.use(hpp());
 // 6. CORS Configuration
 // In production, replace '*' with your actual frontend domain (e.g., https://jaanmak.com)
 const corsOptions = {
-  origin: process.env.FRONTEND_URL || '*',
+  origin: '*',
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   credentials: true,
 };
