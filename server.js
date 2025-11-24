@@ -20,6 +20,9 @@ connectDB();
 
 const app = express();
 
+// Trust the first proxy (Render/Cloudflare)
+app.set('trust proxy', 1);
+
 // ================= SECURITY MIDDLEWARE =================
 
 // 1. Set security HTTP headers
