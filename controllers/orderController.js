@@ -3,6 +3,8 @@ import Order from '../models/orderModel.js';
 import fetch from 'node-fetch';
 import sendEmail from '../utils/sendEmail.js';
 
+import Product from '../models/productModel.js';
+
 // @desc    Create new order
 // @route   POST /api/orders
 // @access  Private
@@ -22,6 +24,22 @@ const addOrderItems = asyncHandler(async (req, res) => {
     throw new Error('No order items');
     return;
   } else {
+    // 1. Check Stock & Decrement
+    for (const item of orderItems) {
+      const product = await Product.findById(item.product);
+      if (!product) {
+        res.status(404);
+        throw new Error(`Product not found: ${item.name}`);
+      }
+      if (product.countInStock < item.quantity) {
+        res.status(400);
+        throw new Error(`Not enough stock for ${item.name}`);
+      }
+      product.countInStock -= item.quantity;
+      await product.save();
+    }
+
+    // 2. Create Order
     const order = new Order({
       orderItems,
       user: req.user._id,
