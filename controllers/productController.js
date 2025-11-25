@@ -47,7 +47,7 @@ const createProduct = asyncHandler(async (req, res) => {
     user: req.user._id,
     image: req.body.image || '/images/sample.jpg',
     category: req.body.category || 'skincare',
-    countInStock: 100,
+    countInStock: req.body.countInStock !== undefined ? req.body.countInStock : 0,
     numReviews: 0,
     description: req.body.description,
     benefits: req.body.benefits,
@@ -73,7 +73,7 @@ const updateProduct = asyncHandler(async (req, res) => {
     product.description = description || product.description;
     product.image = image || product.image;
     product.category = category || product.category;
-    product.countInStock = countInStock || product.countInStock;
+    product.countInStock = countInStock !== undefined ? countInStock : product.countInStock;
     product.benefits = benefits || product.benefits;
     product.ingredients = ingredients || product.ingredients;
     product.howToUse = howToUse || product.howToUse;
