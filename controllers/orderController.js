@@ -162,7 +162,7 @@ const updateOrderStatus = asyncHandler(async (req, res) => {
       console.error("Failed to send status update email", error);
     }
 
-    res.json(updatedOrder);
+    res.json({ ...updatedOrder._doc, emailSentTo: order.user.email });
   } else {
     res.status(404);
     throw new Error('Order not found');
