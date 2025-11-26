@@ -42,4 +42,21 @@ const sendContactEmail = asyncHandler(async (req, res) => {
   }
 });
 
-export { sendContactEmail as sendEmail };
+// @desc    Send test email (Debug)
+// @route   GET /api/email/test
+// @access  Public
+const sendTestEmail = asyncHandler(async (req, res) => {
+  try {
+    await sendEmail({
+      to: 'JUNEANGELBW@GMAIL.COM',
+      subject: 'Jaanmak Live Server Test',
+      html: '<h1>It Works!</h1><p>Your live server email configuration is correct.</p>'
+    });
+    res.status(200).json({ message: 'Test email sent successfully' });
+  } catch (error) {
+    console.error('Test email error:', error);
+    res.status(500).json({ error: error.message, stack: error.stack });
+  }
+});
+
+export { sendContactEmail as sendEmail, sendTestEmail };
