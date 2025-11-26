@@ -9,6 +9,7 @@ const products = [
         howToUse: "Apply a few drops to clean, dry skin. Gently massage in circular motions until fully absorbed. Use morning and night for best results. Follow with your favorite moisturizer.",
         inStock: true,
         countInStock: 50,
+        weight: "1litre"
     },
     {
         name: "FACE WASH",
@@ -20,6 +21,7 @@ const products = [
         howToUse: "Apply to clean face and neck every morning. Massage gently in upward motions. Perfect base for makeup.",
         inStock: true,
         countInStock: 30,
+        weight: "200ml"
     },
     {
         name: "HYALURONIC B5 SERUM",
@@ -31,6 +33,7 @@ const products = [
         howToUse: "Massage onto dry skin to dissolve makeup. Add water to emulsify, then rinse thoroughly. Use daily for clean, soft skin.",
         inStock: true,
         countInStock: 25,
+        weight: "30ml"
     },
     {
         name: "REJUVENATING FACE TONER",
@@ -42,6 +45,7 @@ const products = [
         howToUse: "Apply generously to clean skin before bed. Leave on overnight. Wake up to refreshed, glowing skin.",
         inStock: true,
         countInStock: 40,
+        weight: "200ml"
     },
     {
         name: "GLOW FACE CREAM",
@@ -53,6 +57,7 @@ const products = [
         howToUse: "Gently pat a small amount around the eye area. Use morning and evening for best results.",
         inStock: true,
         countInStock: 35,
+        weight: "100g"
     },
     {
         name: "GLOW BODY LOTION",
@@ -64,6 +69,7 @@ const products = [
         howToUse: "Apply to damp skin and massage in circular motions. Rinse thoroughly. Use 2-3 times per week.",
         inStock: true,
         countInStock: 20,
+        weight: "500ml"
     },
     {
         name: "ACNE SERUM",
@@ -75,6 +81,7 @@ const products = [
         howToUse: "Apply 2-3 drops to clean, dry skin, focusing on acne-prone areas. Use daily, preferably at night, before your moisturizer.",
         inStock: true,
         countInStock: 15,
+        weight: "30ml"
     },
     {
         name: "ACNE TREATMENT",
@@ -86,6 +93,7 @@ const products = [
         howToUse: "Apply a thin layer directly to affected areas. Use once or twice daily after cleansing. Reduce frequency if drying occurs.",
         inStock: true,
         countInStock: 10,
+        weight: "200ml"
     },
     {
         name: "ACNE FACE CREAM",
@@ -97,6 +105,7 @@ const products = [
         howToUse: "Apply a small amount to face and neck after cleansing and toning. Use morning and night for best results.",
         inStock: true,
         countInStock: 22,
+        weight: "100g"
     },
     {
         name: "CLAY FACE MASK",
@@ -108,6 +117,7 @@ const products = [
         howToUse: "Apply an even layer to clean, dry skin. Leave on for 10-15 minutes until dry. Rinse thoroughly with warm water. Use 1-2 times a week.",
         inStock: true,
         countInStock: 18,
+        weight: "150g"
     },
     {
         name: "LIGHTENING FACE CREAM (Essential)",
@@ -119,6 +129,7 @@ const products = [
         howToUse: "Massage gently into face and neck until fully absorbed. Use twice daily, morning and night.",
         inStock: true,
         countInStock: 28,
+        weight: "100g"
     },
     {
         name: "LIGHTENING BODY LOTION (Essential)",
@@ -130,6 +141,7 @@ const products = [
         howToUse: "Apply generously all over the body after bathing. Massage until absorbed. Use daily for best results.",
         inStock: true,
         countInStock: 12,
+        weight: "500ml"
     },
     {
         name: "PAPAYA & KOJIC SOAP",
@@ -141,6 +153,7 @@ const products = [
         howToUse: "Lather soap in hands or on a washcloth. Apply to damp skin and massage gently. Rinse thoroughly. Use daily.",
         inStock: true,
         countInStock: 100,
+        weight: "150g"
     },
     {
         name: "ACTIVATED CHARCOAL SOAP",
@@ -152,6 +165,7 @@ const products = [
         howToUse: "Lather onto wet skin, massage gently to cleanse pores, then rinse thoroughly. Suitable for face and body.",
         inStock: true,
         countInStock: 80,
+        weight: "150g"
     },
     {
         name: "CHILDREN'S SOAP",
@@ -163,6 +177,7 @@ const products = [
         howToUse: "Gently lather on baby's wet skin and rinse with warm water. Suitable for daily use.",
         inStock: true,
         countInStock: 60,
+        weight: "120g"
     },
     {
         name: "J-MULF BODY SCRUB (Premium)",
@@ -174,6 +189,7 @@ const products = [
         howToUse: "Apply to damp skin and massage in circular motions, focusing on rough areas. Rinse well. Use 2-3 times a week.",
         inStock: true,
         countInStock: 10,
+        weight: "750g"
     },
     {
         name: "AVOCADO FACE MASK (Premium)",
@@ -185,6 +201,7 @@ const products = [
         howToUse: "Apply a generous layer to clean face. Relax for 15-20 minutes. Rinse off with warm water. Use weekly.",
         inStock: true,
         countInStock: 15,
+        weight: "150g"
     },
     {
         name: "LIGHTENING FACE CREAM (Premium)",
@@ -196,6 +213,7 @@ const products = [
         howToUse: "Apply a small amount to face and neck. Massage gently in upward motions. Use morning and night.",
         inStock: true,
         countInStock: 20,
+        weight: "100g"
     },
     {
         name: "LIGHTENING BODY LOTION (Premium)",
@@ -207,6 +225,7 @@ const products = [
         howToUse: "Smooth over body after shower. Focus on dark spots or uneven areas. Use daily for a radiant glow.",
         inStock: true,
         countInStock: 8,
+        weight: "500ml"
     },
     {
         name: "SUN GLOW BODY CREAM (Premium)",
@@ -218,6 +237,7 @@ const products = [
         howToUse: "Apply liberally to body, especially dry areas like elbows and knees. Use daily to maintain soft, glowing skin.",
         inStock: true,
         countInStock: 12,
+        weight: "300ml"
     }
 ];
 

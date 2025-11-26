@@ -12,6 +12,7 @@ const productSchema = mongoose.Schema(
     category: { type: String, required: true },
     price: { type: Number, required: true, default: 0 },
     countInStock: { type: Number, required: true, default: 0 },
+    weight: { type: String },
     inStock: { type: Boolean, default: true },
     reviews: [
       {
