@@ -53,6 +53,7 @@ const createProduct = asyncHandler(async (req, res) => {
     benefits: req.body.benefits,
     ingredients: req.body.ingredients,
     howToUse: req.body.howToUse,
+    weight: req.body.weight,
   });
 
   const createdProduct = await product.save();
@@ -63,7 +64,7 @@ const createProduct = asyncHandler(async (req, res) => {
 // @route   PUT /api/products/:id
 // @access  Private/Admin
 const updateProduct = asyncHandler(async (req, res) => {
-  const { name, price, description, image, category, countInStock, benefits, ingredients, howToUse, inStock } = req.body;
+  const { name, price, description, image, category, countInStock, benefits, ingredients, howToUse, inStock, weight } = req.body;
 
   const product = await Product.findById(req.params.id);
 
@@ -78,6 +79,7 @@ const updateProduct = asyncHandler(async (req, res) => {
     product.ingredients = ingredients || product.ingredients;
     product.howToUse = howToUse || product.howToUse;
     product.inStock = inStock !== undefined ? inStock : product.inStock;
+    product.weight = weight || product.weight;
 
     const updatedProduct = await product.save();
     res.json(updatedProduct);
