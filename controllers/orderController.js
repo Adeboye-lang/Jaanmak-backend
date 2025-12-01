@@ -77,7 +77,7 @@ const getOrderById = asyncHandler(async (req, res) => {
 // @route   GET /api/orders/myorders
 // @access  Private
 const getMyOrders = asyncHandler(async (req, res) => {
-  const orders = await Order.find({ user: req.user._id });
+  const orders = await Order.find({ user: req.user._id }).populate('user', 'name email');
   res.json(orders);
 });
 
@@ -143,7 +143,7 @@ const updateOrderStatus = asyncHandler(async (req, res) => {
             ` : ''}
 
             <div style="text-align: center; margin-top: 30px;">
-              <a href="${process.env.FRONTEND_URL || 'http://localhost:5173'}/dashboard" style="background-color: #333; color: #fff; padding: 12px 25px; text-decoration: none; border-radius: 5px; font-size: 14px;">View Order Details</a>
+              <a href="${process.env.FRONTEND_URL || 'http://localhost:5173'}/#/dashboard" style="background-color: #333; color: #fff; padding: 12px 25px; text-decoration: none; border-radius: 5px; font-size: 14px;">View Order Details</a>
             </div>
           </div>
           <div style="background-color: #fafafa; padding: 20px; text-align: center; font-size: 12px; color: #999;">
@@ -239,7 +239,7 @@ const verifyOrderPayment = asyncHandler(async (req, res) => {
               <p>We will notify you once your order is dispatched.</p>
               
               <div style="text-align: center; margin-top: 30px;">
-                <a href="${process.env.FRONTEND_URL || 'http://localhost:5173'}/dashboard" style="background-color: #333; color: #fff; padding: 12px 25px; text-decoration: none; border-radius: 5px; font-size: 14px;">View Order</a>
+                <a href="${process.env.FRONTEND_URL || 'http://localhost:5173'}/#/dashboard" style="background-color: #333; color: #fff; padding: 12px 25px; text-decoration: none; border-radius: 5px; font-size: 14px;">View Order</a>
               </div>
             </div>
             <div style="background-color: #fafafa; padding: 20px; text-align: center; font-size: 12px; color: #999;">
